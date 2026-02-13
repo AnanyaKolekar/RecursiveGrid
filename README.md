@@ -7,7 +7,7 @@ It demonstrates grid interaction logic, ripple rules, and clean component-based 
 
 ## Live Demo
 
-https://recursive-grid-iai0ln56x-ananyas-projects-64c5647f.vercel.app/
+https://recursive-grid-vert.vercel.app/
 
 ---
 
