@@ -5,12 +5,18 @@ It demonstrates grid interaction logic, ripple rules, and clean component-based 
 
 ---
 
+## Live Demo
+
+https://recursive-grid-iai0ln56x-ananyas-projects-64c5647f.vercel.app/
+
+---
+
 ## Tech Stack
 
 - **Framework:** React.js (Vite)
 - **Styling:** CSS Modules
 - **Language:** JavaScript
-- **UI Libraries:** None (No Tailwind, No MUI, No AntD)
+- **UI Libraries:** None
 
 ---
 
@@ -29,32 +35,18 @@ Users click cells to update values, which may trigger ripple effects on neighbor
 - Clicking a box increments its value by **1**
 
 ### Styling Rules
-- **Even Numbers:** Light Gray background 
-- **Odd Numbers:** Navy Blue background  with White text
+- **Even Numbers:** Light Gray background `#e0e0e0`
+- **Odd Numbers:** Navy Blue background `#1a237e` with White text
 - **Locked Boxes:** Red background
-- Rounded corners and shadow styling for clear visual separation
+- Rounded corners and shadow styling
 
 ### Ripple Logic
-
-When a box is clicked and its value updates:
-
-- **Rule A – Divisible by 3**
-  - Decrease the box immediately to the **right** by **1**
-  - No action if the clicked box is in the last column
-
-- **Rule B – Divisible by 5**
-  - Increase the box immediately **below** by **2**
-  - No action if the clicked box is in the last row
+- **Divisible by 3:** Decrease the box to the **right** by **1** (if exists)
+- **Divisible by 5:** Increase the box **below** by **2** (if exists)
 
 ### Locked State
-- If any box reaches **15 or higher**:
-  - Turns **Red**
-  - Becomes **Locked**
-  - Cannot be clicked
-  - Cannot be modified by ripple effects
+- Value **≥ 15** turns the box **Red**
+- Locked boxes cannot be clicked or modified
 
 ### Reset Functionality
-- A **Reset** button restores all grid values back to **0**
-
----
-
+- A **Reset** button
