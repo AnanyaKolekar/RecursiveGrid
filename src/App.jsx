@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Grid from './components/Grid/Grid'
 import ResetButton from './components/ResetButton/ResetButton'
+import RulesPanel from './components/RulesPanel/RulesPanel'
 import styles from './App.module.css'
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
         isBoxLocked={isBoxLocked}
       />
       <ResetButton onReset={handleReset} />
+      <RulesPanel grid={grid} />
     </div>
   )
 }
